@@ -1,0 +1,171 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+	background-image: url(../img/barberia.jpg);
+	background-size: 100vw 100vh;
+    background-attachment: fixed;
+    font-family: 'Lato:300', sans-serif;
+    font-size: 16px;
+    padding-top: 55px;
+}
+
+header{
+	background: rgba(68,84,106,0.80);
+	position: fixed;
+	width: 100%;
+	top:0;
+}
+
+.lista{
+	display: flex;
+	list-style: none;
+}
+
+.menu{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu .logo{
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.menu .logo img{
+	vertical-align: top;
+	height: 25px;
+}
+
+.menu .btn_menu{
+	display: none;
+	color:#fff;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.menu .logo :hover{
+	background: rgba(68,84,106,0.10);
+
+}
+
+.menu .enlaces{
+	display: inline-block;
+	text-align: right;
+}
+
+.menu .enlaces a{
+	color:white;
+	text-decoration: none;
+	display: inline-block;
+	padding: 1em;
+	text-align: center;
+	font-size: 1em;
+}
+
+.menu .enlaces i{
+	margin-right: 5px;
+}
+
+.menu .enlaces .hover:hover{
+	background: white;
+	color: black;
+}
+
+main{
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	padding: 20px;
+	background: rgba(68,84,106,0.10);
+
+
+}
+
+main article h1{
+	font-weight: normal;
+	margin-bottom: .5em;
+}
+
+main article hr{
+	margin-bottom: 1em;
+	height: 2px;
+	background: gray;
+	border: none;
+}
+
+main article p{
+ margin-bottom: 1em;
+ color:#fff;
+}
+
+
+
+.cerrar_sesion input{
+	margin: auto;
+	padding: 8px;
+	background: rgb(183, 28, 28);
+	border-radius: 2px;
+	border: none;
+	color: white;
+	cursor:pointer;
+}
+
+.cerrar_sesion input:hover{
+	background: rgb(229, 57, 53);
+}
+
+/*Efectos del menu*/
+
+.headroom{
+	transition: transform .3s ease;
+}
+
+.headroom--pinned{
+	transform: translateY(0%);
+	}
+
+.headroom--unpinned{
+	transform: translateY(-100%);
+	}
+
+/*media queries*/
+@media screen and (max-width: 700px){
+	header .menu{
+		flex-direction: column;
+	}
+
+	header .menu .logo{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		padding: 1em;
+	}
+
+	header .menu .logo .btn_menu {
+		display: inline-block;
+	}
+
+	header .menu .enlaces .lista{
+		width: 100%;
+		display: flex;
+		flex-direction:row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+
+.menu .enlaces .iniciar{
+	color: #D6D6D6;
+
+}
